@@ -14,12 +14,12 @@ public class DapperDepartmentRepository : IDepartmentRepository
 
     public IEnumerable<Department> GetAllDepartments()
     {
-        return _connection.Query<Department>("SELECT * FROM Department");
+        return _connection.Query<Department>("SELECT * FROM Departments");
     }
 
     public void InsertDepartment(string newDepartmentName)
     {
-        _connection.Execute("INSERT INTO DEPARTMENTS (Name) VALUES (@departmentName);", 
+        _connection.Execute("INSERT INTO Departments (Name) VALUES (@departmentName);", 
             new {departmentName = newDepartmentName});
     }
 }
