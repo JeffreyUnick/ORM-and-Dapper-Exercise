@@ -59,7 +59,9 @@ namespace ORM_Dapper
             Console.WriteLine($"You want to update :{productName}.\nWhat is the new name of this product ?");
             var newName = Console.ReadLine();
             repos.UpdateProduct(newName, productID);
+            Console.WriteLine($"{newName} was updated");
             
+
             // IMPLEMENTATION of DeleteProduct()
             Console.WriteLine("What is the id of the product you want to delete ?");
             var id = int.Parse(Console.ReadLine());
